@@ -173,7 +173,7 @@
     const logoDa = (marca) => ((typeof MARCAS !== 'undefined' && MARCAS.find((m) => m.nome === marca)) || {}).logo;
     $('#depos').innerHTML = DEPOIMENTOS.map((d) => {
       const paragrafos = String(d.texto).split(/\n\s*\n/).map((p) => `<p>${esc(p.trim())}</p>`).join('');
-      const assinatura = [d.nome, d.marca].filter(Boolean).map(esc).join(' · ');
+      const assinatura = d.assinatura ? esc(d.assinatura) : [d.nome, d.marca].filter(Boolean).map(esc).join(' · ');
       const logo = logoDa(d.marca);
       const fundo = d.cor ? ` style="background:${esc(d.cor)}"` : '';
       return `<figure class="depo rev"${fundo}><blockquote>${paragrafos}</blockquote>` +

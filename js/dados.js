@@ -121,6 +121,7 @@ const CASE = {
    nome  = nome da pessoa ('' = aparece só a marca).
    marca = escreva igual ao nome da lista MARCAS: a logo aparece sozinha.
    cor   = (opcional) cor de fundo do card, ex.: 'var(--rosa)'. Sem cor = cor padrão.
+   assinatura = (opcional) texto exato embaixo do depoimento, ex.: 'Time Herbíssimo'.
    Para adicionar mais: copie o bloco { ... }, inteiro, com a vírgula. */
 const DEPOIMENTOS = [
   {
@@ -135,5 +136,11 @@ const DEPOIMENTOS = [
            '\n\nGosto do filtro que usou do vídeo também.',
     nome: '',
     marca: 'Aori Form',
+  },
+  {
+    texto: 'A gente viu o conteúdo que você fez, Bhel, e ficou bonito e natural, daquele jeito que só quem usa de verdade consegue mostrar, com muito carinho pela marca.',
+    nome: '',
+    marca: 'Herbíssimo',
+    assinatura: 'Time Herbíssimo',
   },
 ];
