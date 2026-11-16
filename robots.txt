@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /_referencia/
 
-Sitemap: https://bhelreis.com/sitemap.xml
+Sitemap: https://bhelreis.github.io/sitemap.xml
