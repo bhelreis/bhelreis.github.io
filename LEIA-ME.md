@@ -58,13 +58,22 @@ Ela só precisa apertar "enviar". Para trocar o texto ou o número, abra `js/con
 
 ## Prévia do link (WhatsApp e Instagram)
 
-Já configurada em `index.html`, com a imagem `img/og-imagem.jpg` (sua foto + logo).
-Ela só aparece depois que o site estiver publicado no domínio **bhelreis.com**.
-Se você trocar o domínio, troque `https://bhelreis.com/` em `index.html`, `robots.txt` e `sitemap.xml`.
+Configurada em `index.html`, com a imagem `img/og-imagem.jpg` (sua foto + logo),
+apontando para **https://bhelreis.github.io/**.
+Quando o domínio **bhelreis.com** for ligado, troque `https://bhelreis.github.io/` por
+`https://bhelreis.com/` em `index.html`, `robots.txt` e `sitemap.xml`, e crie o arquivo `CNAME`
+com o texto `bhelreis.com`.
 
-## Publicação (próxima etapa)
+## Publicação
 
-Vamos fazer juntas depois de fechar os textos:
-1. Criar o repositório no GitHub e subir esta pasta.
-2. Publicar (GitHub Pages ou Vercel, ambos gratuitos).
-3. Apontar o domínio **bhelreis.com** da Hostinger para o site.
+- Site no ar: **https://bhelreis.github.io/**
+- Repositório: https://github.com/bhelreis/bhelreis.github.io (GitHub Pages, branch `main`)
+- Para atualizar: salve as mudanças nesta pasta e rode, no terminal desta pasta:
+  ```
+  git add -A
+  git commit -m "o que mudou"
+  git push
+  ```
+  Em 1 ou 2 minutos o site atualiza. (Ou peça ao Claude: "publica de novo".)
+- As anotações (`TEXTOS-*.md`, `PROMPT-CLAUDE-CODE.md`, `_referencia/`) não vão para o GitHub:
+  estão no `.gitignore`.
