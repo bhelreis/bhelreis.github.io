@@ -117,7 +117,23 @@ const CASE = {
 
 /* ---------- Depoimentos ----------
    Só depoimentos reais, com autorização da marca.
+   texto = a mensagem. Para quebrar em parágrafos, use \n\n no meio.
+   nome  = nome da pessoa ('' = aparece só a marca).
+   marca = escreva igual ao nome da lista MARCAS: a logo aparece sozinha.
+   cor   = (opcional) cor de fundo do card, ex.: 'var(--rosa)'. Sem cor = cor padrão.
    Para adicionar mais: copie o bloco { ... }, inteiro, com a vírgula. */
 const DEPOIMENTOS = [
-  { texto: '[Depoimento real da marca parceira.]', nome: 'Nome', marca: 'Marca' },
+  {
+    texto: 'Acabei de ver! Ficou muito lindo!',
+    nome: '',
+    marca: 'Caprichos de Maria',
+    cor: 'var(--rosa)', // mesma cor do card 06 (Pagamento) de "Como funciona"
+  },
+  {
+    texto: 'Eu amei em um geral mesmo! Gostei muito que você destacou o foco da marca, acho isso bem legal para as pessoas saberem a essência que quero levar.' +
+           '\n\nGostei muito de você ter dado mais de uma opção para a peça, achei sensacional porque as pessoas se limitam muito.' +
+           '\n\nGosto do filtro que usou do vídeo também.',
+    nome: '',
+    marca: 'Aori Form',
+  },
 ];

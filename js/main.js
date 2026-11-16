@@ -169,9 +169,16 @@
     $('#caseBox').hidden = true;
   }
   if (temDepos) {
-    $('#depos').innerHTML = DEPOIMENTOS.map((d) =>
-      `<figure class="depo rev"><div class="estrelas">★★★★★</div><blockquote>${esc(d.texto)}</blockquote><cite>${esc(d.nome)} · ${esc(d.marca)}</cite></figure>`
-    ).join('');
+    // a logo vem da lista MARCAS (pelo nome da marca); sem estrelas: ninguém deu nota
+    const logoDa = (marca) => ((typeof MARCAS !== 'undefined' && MARCAS.find((m) => m.nome === marca)) || {}).logo;
+    $('#depos').innerHTML = DEPOIMENTOS.map((d) => {
+      const paragrafos = String(d.texto).split(/\n\s*\n/).map((p) => `<p>${esc(p.trim())}</p>`).join('');
+      const assinatura = [d.nome, d.marca].filter(Boolean).map(esc).join(' · ');
+      const logo = logoDa(d.marca);
+      const fundo = d.cor ? ` style="background:${esc(d.cor)}"` : '';
+      return `<figure class="depo rev"${fundo}><blockquote>${paragrafos}</blockquote>` +
+        `<figcaption>${logo ? `<img class="depo-logo" src="${esc(logo)}" alt="" width="44" height="44" loading="lazy">` : ''}<cite>${assinatura}</cite></figcaption></figure>`;
+    }).join('');
   } else {
     $('#depos').hidden = true;
   }

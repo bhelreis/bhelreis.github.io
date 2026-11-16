@@ -203,10 +203,14 @@ html.travado{overflow:hidden}
 .case .bloco{margin-bottom:18px}
 .case .bloco b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:6px}
 .case .bloco p{font-size:17px;line-height:1.55}
-.depos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:56px}
+.depos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:56px;align-items:start}
 .depo{background:var(--bg);border-radius:20px;padding:28px;border:1px solid rgba(52,52,59,.12)}
 .depo .estrelas{letter-spacing:3px;font-size:14px}
-.depo blockquote{font-size:18px;line-height:1.55;margin:14px 0 18px}
+.depo{display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.depo blockquote{font-size:18px;line-height:1.55;margin:0}
+.depo blockquote p+p{margin-top:12px}
+.depo figcaption{display:flex;align-items:center;gap:12px}
+.depo-logo{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid rgba(52,52,59,.15);flex:none}
 .depo cite{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:1.2px;text-transform:uppercase}
 
 /* vantagens */

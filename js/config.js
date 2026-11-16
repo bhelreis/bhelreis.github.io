@@ -35,7 +35,7 @@ const CONFIG = {
     fotoSobre:     true,   // foto de bastidor no "Sobre mim"
     destaques:     false,  // "Os vídeos que mais renderam" (volta quando tiver resultado real)
     caseDeSucesso: false,  // case (desafio / ideia / resultado)
-    depoimentos:   false,  // depoimentos de marcas
+    depoimentos:   true,   // depoimentos de marcas
     // Se caseDeSucesso E depoimentos estiverem false, a seção
     // "Prova social" inteira some (junto com a faixa preta antes dela).
     // Quando voltar, ela aparece logo depois de "Como funciona".
