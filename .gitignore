@@ -1,0 +1,15 @@
+# Arquivos de trabalho que NÃO vão para o GitHub (o site não precisa deles)
+PROMPT-CLAUDE-CODE.md
+TEXTOS-FINAIS.md
+TEXTOS-PENDENTES.md
+_referencia/
+.claude/
+
+# lixo do sistema
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# guia antigo de publicação manual
+COMO-PUBLICAR.md
+PUBLICAR/

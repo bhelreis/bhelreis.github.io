@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_referencia/
+
+Sitemap: https://bhelreis.com/sitemap.xml
