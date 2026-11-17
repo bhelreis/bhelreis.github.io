@@ -59,14 +59,19 @@ Ela só precisa apertar "enviar". Para trocar o texto ou o número, abra `js/con
 ## Prévia do link (WhatsApp e Instagram)
 
 Configurada em `index.html`, com a imagem `img/og-imagem.jpg` (sua foto + logo),
-apontando para **https://bhelreis.github.io/**.
-Quando o domínio **bhelreis.com** for ligado, troque `https://bhelreis.github.io/` por
-`https://bhelreis.com/` em `index.html`, `robots.txt` e `sitemap.xml`, e crie o arquivo `CNAME`
-com o texto `bhelreis.com`.
+apontando para **https://bhelreis.com/**.
+
+## Domínio bhelreis.com
+
+- O arquivo `CNAME` (com o texto `bhelreis.com`) diz ao GitHub qual é o domínio. Não apague.
+- Na Hostinger (DNS do bhelreis.com) ficam: 4 registros **A** com nome `@` apontando para
+  185.199.108.153 · 185.199.109.153 · 185.199.110.153 · 185.199.111.153,
+  e 1 **CNAME** `www` apontando para `bhelreis.github.io`. Não mexa neles.
+- O endereço antigo bhelreis.github.io continua funcionando e leva sozinho para bhelreis.com.
 
 ## Publicação
 
-- Site no ar: **https://bhelreis.github.io/**
+- Site no ar: **https://bhelreis.com/**
 - Repositório: https://github.com/bhelreis/bhelreis.github.io (GitHub Pages, branch `main`)
 - Para atualizar: salve as mudanças nesta pasta e rode, no terminal desta pasta:
   ```
