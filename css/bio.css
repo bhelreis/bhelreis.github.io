@@ -1,0 +1,41 @@
+/* Página de links da bio (bhelreis.com/links) — usa as cores e fontes de estilo.css */
+body.bio{background:var(--bg) url('../img/pattern.png') repeat;background-size:180px;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+.bio-coluna{width:100%;max-width:480px;padding:48px 22px 24px}
+
+.bio-topo{text-align:center;display:flex;flex-direction:column;align-items:center}
+.bio-foto{width:112px;height:112px;border-radius:50%;object-fit:cover;border:1px solid var(--ink);transform:rotate(-2deg)}
+.bio-topo h1{margin:20px 0 0}
+.bio-logo{height:52px;width:auto}
+.bio-rot{font-family:var(--mono);font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--cinza);margin-top:14px}
+.bio-frase{font-size:18px;line-height:1.35;margin-top:10px}
+.bio-frase em{font-family:var(--italico);font-style:italic;font-weight:400;color:var(--rosa-forte)}
+
+.bio-redes{display:flex;gap:12px;margin-top:22px}
+.bio-redes a{width:48px;height:48px;border-radius:50%;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;background:var(--rosa);transition:transform .2s}
+.bio-redes a:hover{transform:rotate(-6deg)}
+.bio-redes svg,.bio-ico svg{width:22px;height:22px;fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.bio-redes svg .cheio,.bio-ico svg .cheio{fill:var(--ink);stroke:none}
+.bio-topo .nota-mao{margin-top:18px}
+
+.bio-secao{display:flex;align-items:center;justify-content:center;gap:12px;font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8C7F63;margin:30px 0 14px}
+.bio-secao::before,.bio-secao::after{content:"";width:28px;height:1px;background:currentColor}
+
+.bio-btn{display:flex;align-items:center;gap:14px;background:var(--rosa);border:1px solid var(--ink);border-radius:99px;padding:10px 20px 10px 10px;margin-bottom:12px;transition:transform .2s}
+.bio-btn:nth-of-type(odd):hover{transform:rotate(-1deg) translateY(-2px)}
+.bio-btn:nth-of-type(even):hover{transform:rotate(1deg) translateY(-2px)}
+.bio-ico{flex:none;width:44px;height:44px;border-radius:50%;background:var(--areia);display:flex;align-items:center;justify-content:center}
+.bio-txt{flex:1;display:flex;flex-direction:column;gap:2px;text-align:left}
+.bio-txt b{font-weight:600;font-size:16px}
+.bio-txt small{font-size:12.5px;color:var(--cinza);line-height:1.35}
+.bio-seta{font-size:18px}
+
+/* botão principal: preto cheio, como os botões principais do site */
+.bio-btn.principal{background:var(--ink);color:#fff}
+.bio-btn.principal .bio-ico{background:var(--bg)}
+.bio-btn.principal .bio-txt small{color:rgba(252,251,247,.7)}
+
+.bio-rodape{margin-top:auto;padding:30px 0 40px;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--cinza)}
+.bio-rodape img{height:52px;width:auto}
+
+@media (max-width:900px){body.bio,.bio a{cursor:auto}}
+@media (prefers-reduced-motion:reduce){.bio-btn,.bio-redes a{transition:none}}

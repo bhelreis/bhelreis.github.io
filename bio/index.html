@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bhel Reis · bio</title>
+<meta name="description" content="Bhel Reis, UGC creator. Portfólio, proposta pelo WhatsApp e e-mail.">
+<link rel="canonical" href="https://bhelreis.com/bio/">
+<meta name="theme-color" content="#F6F3EC">
+
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Bhel Reis">
+<meta property="og:url" content="https://bhelreis.com/bio/">
+<meta property="og:title" content="Bhel Reis · UGC creator">
+<meta property="og:description" content="Vídeos que performam com linguagem de cinema. Portfólio, proposta e contato.">
+<meta property="og:image" content="https://bhelreis.com/img/og-imagem.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500&family=Homemade+Apple&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/estilo.css?v=202611162148">
+<link rel="stylesheet" href="/css/bio.css?v=202611162148">
+</head>
+<body class="bio">
+
+<main class="bio-coluna">
+  <div class="bio-topo">
+    <img class="bio-foto" src="/img/bio-foto.jpg" alt="Bhel Reis sorrindo" width="320" height="320">
+    <h1><img class="bio-logo" src="/img/logo-preto.png" alt="Bhel Reis" width="640" height="193"></h1>
+    <p class="bio-rot">UGC creator · Guarulhos, SP</p>
+    <p class="bio-frase">Vídeos que performam <em>com linguagem de cinema</em></p>
+
+    <nav class="bio-redes" aria-label="Redes e contato">
+      <a href="https://instagram.com/bhelreis" target="_blank" rel="noopener" aria-label="Instagram @bhelreis">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" class="cheio"/></svg>
+      </a>
+      <a data-wpp href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.8z"/><path d="M9.2 8.6c.2 2.6 3 5.6 6 6.2l1.1-1.3-1.8-1-.9.8a5 5 0 0 1-2.9-2.9l.8-.9-1-1.8z" class="cheio"/></svg>
+      </a>
+      <a data-email href="#" aria-label="E-mail">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.8 7l8.2 6 8.2-6"/></svg>
+      </a>
+    </nav>
+    <span class="nota-mao">bora criar juntos? ↓</span>
+  </div>
+
+  <section aria-labelledby="t-marcas">
+    <h2 class="bio-secao" id="t-marcas">Para marcas</h2>
+    <a class="bio-btn principal" href="/">
+      <span class="bio-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 6h2"/></svg></span>
+      <span class="bio-txt"><b>Ver meu portfólio</b><small>vídeos por nicho, serviços e como funciona</small></span>
+      <span class="bio-seta" aria-hidden="true">→</span>
+    </a>
+    <a class="bio-btn" data-wpp href="#" target="_blank" rel="noopener">
+      <span class="bio-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.8z"/></svg></span>
+      <span class="bio-txt"><b>Solicitar proposta</b><small>direto no meu WhatsApp</small></span>
+      <span class="bio-seta" aria-hidden="true">↗</span>
+    </a>
+    <a class="bio-btn" data-email href="#">
+      <span class="bio-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.8 7l8.2 6 8.2-6"/></svg></span>
+      <span class="bio-txt"><b>Mandar e-mail</b><small>para propostas e parcerias</small></span>
+      <span class="bio-seta" aria-hidden="true">↗</span>
+    </a>
+  </section>
+</main>
+
+<footer class="bio-rodape">
+  <img src="/img/logo-linha.png" alt="Bhel Reis" width="640" height="218" loading="lazy">
+  <a href="/">bhelreis.com</a>
+</footer>
+
+<script src="/js/config.js?v=202611162148"></script>
+<script>
+  (function () {
+    var msg = String(CONFIG.whatsappMensagem || '').trim();
+    var wpp = 'https://wa.me/' + String(CONFIG.whatsapp).replace(/\D/g, '') + (msg ? '?text=' + encodeURIComponent(msg) : '');
+    document.querySelectorAll('[data-wpp]').forEach(function (a) { a.href = wpp; });
+    var email = String(CONFIG.email || '').trim();
+    document.querySelectorAll('[data-email]').forEach(function (a) { if (email) a.href = 'mailto:' + email; else a.hidden = true; });
+  })();
+</script>
+</body>
+</html>
