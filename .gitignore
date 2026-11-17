@@ -13,3 +13,6 @@ Thumbs.db
 # guia antigo de publicação manual
 COMO-PUBLICAR.md
 PUBLICAR/
+
+# script de publicação (fica só no computador)
+publicar.ps1
