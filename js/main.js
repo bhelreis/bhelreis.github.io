@@ -171,11 +171,14 @@
   if (temDepos) {
     // a logo vem da lista MARCAS (pelo nome da marca); sem estrelas: ninguém deu nota
     const logoDa = (marca) => ((typeof MARCAS !== 'undefined' && MARCAS.find((m) => m.nome === marca)) || {}).logo;
-    $('#depos').innerHTML = DEPOIMENTOS.map((d) => {
+    // 1º areia clarinho, 2º areia do fundo, 3º areia mais escuro… e repete
+    const CORES_DEPO = ['var(--rosa)', 'var(--bg)', 'var(--azul)'];
+    $('#depos').innerHTML = DEPOIMENTOS.map((d, i) => {
       const paragrafos = String(d.texto).split(/\n\s*\n/).map((p) => `<p>${esc(p.trim())}</p>`).join('');
       const assinatura = d.assinatura ? esc(d.assinatura) : [d.nome, d.marca].filter(Boolean).map(esc).join(' · ');
       const logo = logoDa(d.marca);
-      const fundo = d.cor ? ` style="background:${esc(d.cor)}"` : '';
+      // cores se revezam a cada depoimento (todas da paleta do site)
+      const fundo = ` style="background:${esc(d.cor || CORES_DEPO[i % CORES_DEPO.length])}"`;
       return `<figure class="depo rev"${fundo}><blockquote>${paragrafos}</blockquote>` +
         `<figcaption>${logo ? `<img class="depo-logo" src="${esc(logo)}" alt="" width="44" height="44" loading="lazy">` : ''}<cite>${assinatura}</cite></figcaption></figure>`;
     }).join('');

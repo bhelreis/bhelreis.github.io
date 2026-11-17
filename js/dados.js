@@ -120,7 +120,8 @@ const CASE = {
    texto = a mensagem. Para quebrar em parágrafos, use \n\n no meio.
    nome  = nome da pessoa ('' = aparece só a marca).
    marca = escreva igual ao nome da lista MARCAS: a logo aparece sozinha.
-   cor   = (opcional) cor de fundo do card, ex.: 'var(--rosa)'. Sem cor = cor padrão.
+   As cores dos cards se revezam sozinhas (clarinho, areia, areia mais escuro…).
+   cor   = (opcional) só se quiser forçar uma cor num card, ex.: 'var(--rosa)'.
    assinatura = (opcional) texto exato embaixo do depoimento, ex.: 'Time Herbíssimo'.
    Para adicionar mais: copie o bloco { ... }, inteiro, com a vírgula. */
 const DEPOIMENTOS = [
@@ -128,7 +129,6 @@ const DEPOIMENTOS = [
     texto: 'Acabei de ver! Ficou muito lindo!',
     nome: '',
     marca: 'Caprichos de Maria',
-    cor: 'var(--rosa)', // mesma cor do card 06 (Pagamento) de "Como funciona"
   },
   {
     texto: 'Eu amei em um geral mesmo! Gostei muito que você destacou o foco da marca, acho isso bem legal para as pessoas saberem a essência que quero levar.' +
